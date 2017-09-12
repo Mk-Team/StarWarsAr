@@ -26,12 +26,13 @@ install() {
 
 function print_logo() {
 	green " "
-	green "        -- __  __                    _       
-                   --|  \/  | __ _ _ __ ___ ___| | ___  
-                   --| |\/| |/ _` | '__/ __/ _ \ |/ _ \ 
-                   --| |  | | (_| | | | (_|  __/ | (_) |
-                   --|_|  |_|\__,_|_|  \___\___|_|\___/ 
-                   -- BY :- @iiDii Ch :- @Star_Wars"
+	green " ____  _           __        __             
+/ ___|| |_ __ _ _ _\ \      / /_ _ _ __ ___ 
+\___ \| __/ _` | '__\ \ /\ / / _` | '__/ __|
+ ___) | || (_| | |   \ V  V / (_| | |  \__ \
+|____/ \__\__,_|_|    \_/\_/ \__,_|_|  |___/
+ BY :- @Star_Wars                                           
+"
 	green " "
 	green " "
 	echo -e "\n\e[0m"
@@ -41,12 +42,13 @@ function logo_play() {
     declare -A txtlogo
     seconds="0.010"
     txtlogo[1]=" "
-    txtlogo[2]="  -- __  __                    _       
-                  --|  \/  | __ _ _ __ ___ ___| | ___  
-                  --| |\/| |/ _` | '__/ __/ _ \ |/ _ \ 
-                  --| |  | | (_| | | | (_|  __/ | (_) |
-                  --|_|  |_|\__,_|_|  \___\___|_|\___/ 
-                  -- BY :- @iiDii Ch :- @Star_Wars "
+    txtlogo[2]=" ____  _           __        __             
+/ ___|| |_ __ _ _ _\ \      / /_ _ _ __ ___ 
+\___ \| __/ _` | '__\ \ /\ / / _` | '__/ __|
+ ___) | || (_| | |   \ V  V / (_| | |  \__ \
+|____/ \__\__,_|_|    \_/\_/ \__,_|_|  |___/
+BY :- @Star_Wars                                            
+"
     txtlogo[3]=" "
     txtlogo[4]=" "
     printf "\e[31m\t"
@@ -64,11 +66,11 @@ function logo_play() {
 function th3boss() {
 	echo -e "\e[0m"
 	  red "     >>>>                         We Are Not Attacker                             "
-    green "     >>>>                         We Are Not Alliance                             "
+    green "     >>>>                             We Are Not Alliance                             "
 	white "     >>>>                         We Are Programmer                               "
 	white "     >>>>                         We Are The Best                                 "
 	  red "     >>>>                         We Are Family                                   "
-	  red "     >>>>                         @Star_Wars                                      "
+	  red "     >>>>                         Ch @Star_Wars                                   "
 	echo -e "\e[0m"
 }
 
