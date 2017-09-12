@@ -1,7 +1,3 @@
--- BY MOHAMMED HISHAM
--- BY @TH3BOSS
--- BY @lBOSSl
-
 tdcli = dofile('./tg/tdcli.lua')
 serpent = (loadfile "./libs/serpent.lua")()
 feedparser = (loadfile "./libs/feedparser.lua")()
@@ -20,7 +16,7 @@ local notify = lgi.require('Notify')
 notify.init ("Telegram updates")
 chats = {}
 plugins = {}
-helper_username = 'TH3BOSS'  -- Input Helper Username Here Without @
+helper_username = 'Star_Wars'  -- Input Helper Username Here Without @
 
 function do_notify (user, msg)
 	local n = notify.Notification.new(user, msg)
@@ -78,7 +74,7 @@ function save_config( )
 end
 
 function create_config( )
-	io.write('\n\27[1;33m>> Input your Telegram ID for set Sudo : 	\27[0;39;49m')
+	io.write('\n\27[1;33m>> Input your Telegram ID for set Sudo :- 	\27[0;39;49m')
 	local sudo_id =  tonumber(io.read())
   -- A simple config with basic plugins and ourselves as privileged user
 	config = {
@@ -96,24 +92,21 @@ function create_config( )
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-	info_text = [[ 🌟| TH3BOSS V17 For More Information Subscribe
+	info_text = [[> Star Wars ⚡️ v2 [AR]
 
-🌟| https://github.com/moody2020/TH3BOSS 
+سورس Star Wars-Api يعمل على مجموعات تصل 10K
 
-🌟| ƊЄƔЄԼƠƤЄƦ ƬӇȜƁƠƧƧ  :
-🌟| @TH3BOSS ➣ Developer 🌟
-🌟| @llDEV1ll ➣ Developer Channel 🌟
-🌟| @lBOSSl ➣ GruobManager 🌟
+> Channel 📢:- @Star_Wars 
+The Developers > Star Wars [Ar] 
 
-🌟| Special thanks to :
-🌟| TH3BOSS Team Members
+> @iiDii - @xDrrr - @lHTMLl
 
-🌟| Developer Channel :
-🌟| @llDEV1ll 🌟
+Thanks To Mk Team ☺️
+> User @Mk_Team
 
-🌟| GruobManager :
-🌟| https://telegram.me/joinchat/A5_fO0MzalUgDtZiLJafYQ
-]],
+> Support Bot 📨:- @SuperWars_Bot
+
+> The Grouo support Star wars 🌐https://t.me/joinchat/Fhz2t0IcBHGXM3_-5QNDvA]],
 
   }
 	serialize_to_file(config, './data/config.lua')
@@ -155,7 +148,7 @@ function load_plugins()
 			print('\27[31m'..err..'\27[39m')
 		end
 	end
-	print('\n'..#config.enabled_plugins..' Plugins Are Active\n\nStarting TH3BOSS V17 Robot...\n')
+	print('\n'..#config.enabled_plugins..' Plugins Are Active\n\nStarting Star Wars™ Robot...\n')
 end
 
 load_plugins()
