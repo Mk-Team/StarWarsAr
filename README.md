@@ -1,4 +1,4 @@
-# [<< TH3BOSS >> V17 (Final Version)](https://telegram.me/llDEV1ll)
+# [Star Wars [Ar])](https://telegram.me/Star_wars)
 
 **An advanced and powerful administration bot based on NEW TG-CLI
 
@@ -10,7 +10,7 @@
 
 
 ```sh
-<< TH3BOSS >>
+*STAR WARS*
 
 لتنصيب سورس Star Wars ⚡️ الاقوى على منصة التليجرام 🌐 بلغة العربية !
 
@@ -18,19 +18,19 @@
 ▪️  cd $HOME
 ‎__________________
 
-▪️  git clone https://github.com/Mk-Team/StarWarsAr.
+▪️  git clone https://github.com/Mk-Team/StarWarsAr.git
 _____________________
 
-▪️  cd StarWars-Api
+▪️  cd StarWarsAr
 ______________________
 
-▪️  chmod +x wars.sh
+▪️  chmod +x StarWars.sh
 ______________________
 
-▪️  ./wars.sh install
+▪️  ./StarWars.sh install
 _______________________
 
-▪️  ./wars.sh 
+▪️  ./StarWars.sh 
 
  لزيادة سرعة البوت يمكنك استخدام ⤵️:
 chmod 777 autobd.sh
@@ -39,38 +39,38 @@ chmod 777 autobd.sh
 _______________________________
 تابع قناتتا لمعرفة المزيذ 📢 :- @Star_Wars
 للاستفسار 📨 :- @SuperWars_Bot
+
 ### One command
 To install everything in one command, use:
 ```sh
-cd $HOME && git clone https://github.com/moody2020/TH3BOSS.git && cd TH3BOSS && chmod +x TH3BOSS.sh && ./TH3BOSS.sh install && ./TH3BOSS.sh
+cd $HOME && git clone https://github.com/Mk-Team/StarWarsAr.git && cd StarWarsAr && chmod +x StarWars.sh && ./StarWars.sh install && ./StarWars.sh
 
 OR
 
-cd $HOME && git clone https://github.com/moody2020/TH3BOSS.git && cd TH3BOSS && chmod +x TH3BOSS.sh && ./TH3BOSS.sh install && chmod 777 autobd.sh && screen ./autobd.sh
+cd $HOME && git clone https://github.com/Mk-Team/StarWarsAr.git && cd StarWarsAr && chmod +x StarWars.sh && ./StarWars.sh install && chmod 777 autobd.sh && screen ./autobd.sh
 ```
 
 * * *
 
 # Support and Development
 
-More information [TH3BOSS Global Chat](https://t.me/joinchat/A5_fO0OPsgbb_99AkUgWQ)
 
-More information [TH3BOSS Channel](https://t.me/lBOSSl)
+More information [Star Wars Channel](https://t.me/Star_warsl)
 
 
 * * *
 
 # Developers !
 
-[TH3BOSS](https://github.com/moody2020) ([Telegram](https://telegram.me/TH3BOSS))
+[Marcelo Mk](https://github.com/Mk-Team) ([Telegram](https://telegram.me/iiDii))
 
-[Mohammed Hisham](https://github.com/moody2020) ([Telegram](https://telegram.me/lBOSSl))
+[Ali - Programmer](https://github.com/Mk-Team) ([Telegram](https://xDRRR))
 
-[TEAMBOSS](https://github.com/moody2020) ([Telegram](https://telegram.me/lBOSSl))
+[Support Star Wars](https://github.com/mk-team) ([Telegram](https://telegram.me/Superwars_bot))
 
 
-### Our Telegram channel : [@llDEV1ll](https://telegram.me/llDEV1ll)
+*Our Telegram channel* : [Star Wats](https://telegram.me/Star_wars)
 
-# Special thanks to Omar Alsaray : [@blcon](https://telegram.me/blcon)
+# Special thanks To Mk Team : [MK TEAM](https://telegram.me/MK_team)
 
-# [<< TH3BOSS >> V17 (Final Version)](https://telegram.me/llDEV1ll)
+
