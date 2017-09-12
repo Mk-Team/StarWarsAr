@@ -9,7 +9,7 @@ do local _ = {
     "tools",
     "replay"
   },
-  info_text = " 🌟| TH3BOSS V17 For More Information Subscribe\n\n🌟| https://github.com/moody2020/TH3BOSS \n\n🌟| ƊЄƔЄԼƠƤЄƦ ƬӇȜƁƠƧƧ  :\n🌟| @TH3BOSS ➣ Developer 🌟\n🌟| @llDEV1ll ➣ Developer Channel 🌟\n🌟| @lBOSSl ➣ GruobManager 🌟\n\n🌟| Special thanks to :\n🌟| TH3BOSS Team Members\n\n🌟| Developer Channel :\n🌟| @llDEV1ll 🌟\n\n🌟| GruobManager :\n🌟| https://telegram.me/joinchat/A5_fO0MzalUgDtZiLJafYQ\n",
+  info_text = "> Star Wars ⚡️ v2 [AR]\n\nسورس Star Wars-Api يعمل على مجموعات تصل 10K\n> Channel 📢:- @Star_Wars \n\nThe Developers > Star Wars [Ar] \n> @iiDii - @xDrrr - @lHTMLl\n\nThanks To Mk Team ☺️\n> User @Mk_Team\n\n> Support Bot 📨:- @SuperWars_Bot\n> The Grouo support Star wars 🌐https://t.me/joinchat/Fhz2t0IcBHGXM3_-5QNDvA\n",
   moderation = {
     data = "./data/moderation.json"
   },
