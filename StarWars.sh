@@ -26,12 +26,12 @@ install() {
 
 function print_logo() {
 	green " "
-	green " ____  _           __        __             
-/ ___|| |_ __ _ _ _\ \      / /_ _ _ __ ___ 
-\___ \| __/ _` | '__\ \ /\ / / _` | '__/ __|
- ___) | || (_| | |   \ V  V / (_| | |  \__ \
-|____/ \__\__,_|_|    \_/\_/ \__,_|_|  |___/
- BY :- @Star_Wars                                           
+	green "   ____  _           __        __             
+                 / ___|| |_ __ _ _ _\ \      / /_ _ _ __ ___ 
+                 \___ \| __/ _` | '__\ \ /\ / / _` | '__/ __|
+                  ___) | || (_| | |   \ V  V / (_| | |  \__ \
+                 |____/ \__\__,_|_|    \_/\_/ \__,_|_|  |___/
+                 BY :- @iiDii                ch :- @Star_Wars                                           
 "
 	green " "
 	green " "
@@ -43,11 +43,11 @@ function logo_play() {
     seconds="0.010"
     txtlogo[1]=" "
     txtlogo[2]=" ____  _           __        __             
-/ ___|| |_ __ _ _ _\ \      / /_ _ _ __ ___ 
-\___ \| __/ _` | '__\ \ /\ / / _` | '__/ __|
- ___) | || (_| | |   \ V  V / (_| | |  \__ \
-|____/ \__\__,_|_|    \_/\_/ \__,_|_|  |___/
-BY :- @Star_Wars                                            
+                / ___|| |_ __ _ _ _\ \      / /_ _ _ __ ___ 
+                \___ \| __/ _` | '__\ \ /\ / / _` | '__/ __|
+                  ___) | || (_| | |   \ V  V / (_| | |  \__ \
+                 |____/ \__\__,_|_|    \_/\_/ \__,_|_|  |___/
+                 BY :- @iiDii                ch :- @Star_Wars                                            
 "
     txtlogo[3]=" "
     txtlogo[4]=" "
@@ -66,7 +66,7 @@ BY :- @Star_Wars
 function th3boss() {
 	echo -e "\e[0m"
 	  red "     >>>>                         We Are Not Attacker                             "
-    green "     >>>>                             We Are Not Alliance                             "
+        green "     >>>>                         We Are Not Alliance                             "
 	white "     >>>>                         We Are Programmer                               "
 	white "     >>>>                         We Are The Best                                 "
 	  red "     >>>>                         We Are Family                                   "
