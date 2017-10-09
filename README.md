@@ -1,12 +1,11 @@
 # [Star Wars [Ar])](https://telegram.me/Star_wars)
 
-**An advanced and powerful administration bot based on NEW TG-CLI
-
+لتنصيب سورس Star Wars ⚡️ الاقوى على منصة التليجرام 🌐 بلغة العربية !
 
 * * *
 
 
-# Installation
+# طريقة التنصيب !
 
 
 ```sh
@@ -37,8 +36,8 @@ chmod 777 autobd.sh
 
 ./autobd.sh
 _______________________________
-تابع قناتتا لمعرفة المزيذ 📢 :- @Star_Wars
-للاستفسار 📨 :- @SuperWars_Bot
+تابع قناتتا لمعرفة المزيذ 📢 :- @WarsTeam
+للاستفسار 📨 :- @WarsSupportBot
 
 ### One command
 To install everything in one command, use:
@@ -69,7 +68,7 @@ More information [Star Wars Channel](https://t.me/Star_warsl)
 [Support Star Wars](https://github.com/mk-team) ([Telegram](https://telegram.me/Superwars_bot))
 
 
-*Our Telegram channel* : [Star Wats](https://telegram.me/Star_wars)
+*Our Telegram channel* : [Star Wats](https://telegram.me/WarsTeam)
 
 # Special thanks To Mk Team : [MK TEAM](https://telegram.me/MK_team)
 
