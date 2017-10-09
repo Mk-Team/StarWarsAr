@@ -85,7 +85,9 @@ function create_config( )
     "plugins",
     "tools",
     "replay",
-
+    "delmsg",			
+    "zkrAr",
+    "infoser",			
 
 	},
     sudo_users = {sudo_id},
@@ -96,14 +98,16 @@ function create_config( )
 
 سورس Star Wars-Api يعمل على مجموعات تصل 10K
 
-> Channel 📢:- @Star_Wars 
+> Channel 📢:- @WarsTeam 
 The Developers > Star Wars [Ar] 
 
 > @iiDii - @xDrrr - @lHTMLl
 
 Thanks To Mk Team ☺️
 > User @Mk_Team
-
+		
+> Link Github :- https://github.com/Mk-Team/StarWarsAr
+		
 > Support Bot 📨:- @SuperWars_Bot
 
 > The Grouo support Star wars 🌐https://t.me/joinchat/Fhz2t0IcBHGXM3_-5QNDvA]],
