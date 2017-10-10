@@ -1,3 +1,9 @@
+-- __  __                    _       
+--|  \/  | __ _ _ __ ___ ___| | ___  
+--| |\/| |/ _` | '__/ __/ _ \ |/ _ \ 
+--| |  | | (_| | | | (_|  __/ | (_) |
+--|_|  |_|\__,_|_|  \___\___|_|\___/ 
+-- BY :- @iiDii Ch :- @WarsTeam
 local function delmsg (i,naji)
     msgs = i.msgs 
     for k,v in pairs(naji.messages_) do
