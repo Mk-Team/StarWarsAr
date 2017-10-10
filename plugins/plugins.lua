@@ -62,7 +62,7 @@ local function list_plugins(only_enabled)
     end 
     if not only_enabled or status == '✅' then 
       v = string.match (v, "(.*)%.lua") 
-      text = text..status..'➠ '..v..'\n' 
+      text = text..status..'➠ *'..v..'*\n' 
     end 
   end 
   local text = 'جميع الملفات 📑\n'..text..'\n> عدد جميع الملفات 🗄 :– ['..nsum..']\n> عدد الملفات المفعلة ✅ :– ['..nact..']\n> عدد الملفات المعطلة ❌ :–['..nsum-nact..']'
