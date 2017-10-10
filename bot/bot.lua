@@ -80,13 +80,13 @@ function create_config( )
 	config = {
     enabled_plugins = {
 	"banhammer",
-    "groupmanager",
+    "supergroup",
     "msg-checks",
     "plugins",
     "tools",
     "replay",
     "delmsg",			
-    "zkrAr",
+    "zkrfAr",
     "infoser",			
 
 	},
@@ -108,7 +108,7 @@ Thanks To Mk Team ☺️
 		
 > Link Github :- https://github.com/Mk-Team/StarWarsAr
 		
-> Support Bot 📨:- @SuperWars_Bot
+> Support Bot 📨:- @WarsSupportBot
 
 > The Grouo support Star wars 🌐https://t.me/joinchat/Fhz2t0IcBHGXM3_-5QNDvA]],
 
