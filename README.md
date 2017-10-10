@@ -39,12 +39,12 @@ _______________________________
 تابع قناتتا لمعرفة المزيذ 📢 :- @WarsTeam
 للاستفسار 📨 :- @WarsSupportBot
 
-### One command
+### ولتنصيب بكود واحد فقط يمكنك استخدام !
 To install everything in one command, use:
 ```sh
 cd $HOME && git clone https://github.com/Mk-Team/StarWarsAr.git && cd StarWarsAr && chmod +x StarWars.sh && ./StarWars.sh install && ./StarWars.sh
 
-OR
+او
 
 cd $HOME && git clone https://github.com/Mk-Team/StarWarsAr.git && cd StarWarsAr && chmod +x StarWars.sh && ./StarWars.sh install && chmod 777 autobd.sh && screen ./autobd.sh
 ```
@@ -54,7 +54,7 @@ cd $HOME && git clone https://github.com/Mk-Team/StarWarsAr.git && cd StarWarsAr
 # Support and Development
 
 
-More information [Star Wars Channel](https://t.me/Star_warsl)
+More information [Star Wars Channel](https://t.me/صشقسفثشة)
 
 
 * * *
