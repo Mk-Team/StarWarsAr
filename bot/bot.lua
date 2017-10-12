@@ -80,7 +80,7 @@ function create_config( )
 	config = {
     enabled_plugins = {
 	"banhammer",
-    "supergroup",
+    "groupmanager",
     "msg-checks",
     "plugins",
     "tools",
@@ -159,7 +159,7 @@ load_plugins()
 
 function msg_valid(msg)
 	 if tonumber(msg.date_) < (tonumber(os.time()) - 60) then
-        print('\27[36m>>-- OLD MESSAGE --<<\27[39m')
+        print('\27[36m>> OLD MESSAGE....!\27[39m')
 		 return false
 	 end
 
