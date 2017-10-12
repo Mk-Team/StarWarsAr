@@ -3,7 +3,7 @@ do local _ = {
   disabled_channels = {},
   enabled_plugins = {
     "banhammer",
-    "supergroup",
+    "groupmanager",
     "msg-checks",
     "plugins",
     "tools",
