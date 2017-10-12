@@ -5,7 +5,7 @@
 --|_|  |_|\__,_|_|  \___\___|_|\___/ 
 -- BY :- @iiDii Ch :- @Star_Wars
 --Begin Tools.lua :)
-local SUDO = 352568466 -- ضع ايديك هنا عزيزي<===
+local SUDO = 370996919 -- ضع ايديك هنا عزيزي<===
 function exi_files(cpath)
     local files = {}
     local pth = cpath
