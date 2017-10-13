@@ -26,37 +26,37 @@ end
       whitelist ={},
       settings = {
           set_name = msg.to.title,
-          lock_link = '☑️️',
-          lock_tag = '❌',
-          lock_spam = '☑️️',
-          lock_webpage = '☑️️',
-          lock_markdown = '❌',
-          flood = '☑️️',
-          lock_bots = '☑️️',
-          lock_pin = '❌',
-          welcome = '❌',
-		  lock_join = '❌',
-		  lock_edit = '❌',
-		  lock_mention = '☑️️',
+          lock_link = 'yes',
+          lock_tag = 'no',
+          lock_spam = 'yes',
+          lock_webpage = 'yes',
+          lock_markdown = 'no',
+          flood = 'yes',
+          lock_bots = 'yes',
+          lock_pin = 'no',
+          welcome = 'no',
+		  lock_join = 'no',
+		  lock_edit = 'no',
+		  lock_mention = 'yes',
 		  num_msg_max = '5',
 		  time_check = '2',
           },
    mutes = {
-                  mute_forward = '☑️️',
-                  mute_audio = '❌',
-                  mute_video = '❌',
-                  mute_contact = '☑️️',
-                  mute_text = '❌',
-                  mute_photo = '❌',
-                  mute_gif = '❌',
-                  mute_location = '☑️️',
-                  mute_document = '❌',
-                  mute_sticker = '❌',
-                  mute_voice = '❌',
-				  mute_keyboard = '❌',
-				  mute_game = '❌',
-				  mute_inline = '❌',
-				  mute_tgservice = '❌',
+                  mute_forward = 'yes',
+                  mute_audio = 'no',
+                  mute_video = 'no',
+                  mute_contact = 'yes',
+                  mute_text = 'no',
+                  mute_photo = 'no',
+                  mute_gif = 'no',
+                  mute_location = 'yes',
+                  mute_document = 'no',
+                  mute_sticker = 'no',
+                  mute_voice = 'no',
+				  mute_keyboard = 'no',
+				  mute_game = 'no',
+				  mute_inline = 'no',
+				  mute_tgservice = 'no',
           }
       }
   save_data(_config.moderation.data, data)
@@ -372,7 +372,7 @@ local cmd = arg.cmd
     local administration = load_data(_config.moderation.data)
   if not administration[tostring(arg.chat_id)] then
 
-    return tdcli.sendMessage(data.chat_id_, "", 0, "*>* _هذه المجموعه 🚻 ليست من حمايتي ⚡️", 0, "md")
+    return tdcli.sendMessage(data.chat_id_, "", 0, "*>* هذه المجموعه 🚻 ليست من حمايتي ⚡️", 0, "md")
      
   end
 if not arg.username then return false end
@@ -473,7 +473,7 @@ local cmd = arg.cmd
     local administration = load_data(_config.moderation.data)
   if not administration[tostring(arg.chat_id)] then
 
-    return tdcli.sendMessage(data.chat_id_, "", 0, "*>* _هذه المجموعه 🚻 ليست من حمايتي ⚡️", 0, "md")
+    return tdcli.sendMessage(data.chat_id_, "", 0, "*>* هذه المجموعه 🚻 ليست من حمايتي ⚡️", 0, "md")
      
   end
 if not tonumber(arg.user_id) then return false end
@@ -590,10 +590,10 @@ if not is_mod(msg) then
  return "*>* _فقط الادمنية 🚻 يمكنه التحكم في البوت 🤖 !_"
 end
 local replay = data[tostring(target)]["settings"]["replay"] 
-if replay == "❌" then
+if replay == "no" then
 return '*>* _الردود📢  بلفعل تم ايقافها 📴 في المجموعة ✅_'
 else
-data[tostring(target)]["settings"]["replay"] = "❌"
+data[tostring(target)]["settings"]["replay"] = "no"
 save_data(_config.moderation.data, data) 
 return '*>* _تم ايقاف   الردود 📢  في هذا المجموعة ✅!_'
 end
@@ -604,10 +604,10 @@ local function unlock_replay(msg, data, target)
  return "*>* _فقط الادمنية 🚻 يمكنه التحكم في البوت 🤖 !_"
 end 
 local replay = data[tostring(target)]["settings"]["replay"]
- if replay == "☑️️" then
+ if replay == "yes" then
 return '*>* _الردود📢  بلفعل تم تشغيلها 📳 في المجموعة ✅_'
 else 
-data[tostring(target)]["settings"]["replay"] = "☑️️"
+data[tostring(target)]["settings"]["replay"] = "yes"
 save_data(_config.moderation.data, data) 
 return '*>* _تم تشغيل   📳 الردود 📢  في هذا المجموعة ✅!_ '
 end
@@ -621,10 +621,10 @@ if not is_mod(msg) then
 end
 
 local lock_link = data[tostring(target)]["settings"]["lock_link"] 
-if lock_link == "☑️️" then
+if lock_link == "yes" then
 return '*>* _الررابط 📎  بلتأكيد تم قفلها 🔐 في المجموعة ✅_'
 else
-data[tostring(target)]["settings"]["lock_link"] = "☑️️"
+data[tostring(target)]["settings"]["lock_link"] = "yes"
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل  🔐 الروابط 📎  في هذا المجموعة ✅!_'
@@ -641,12 +641,12 @@ local function unlock_link(msg, data, target)
 end 
 
 local lock_link = data[tostring(target)]["settings"]["lock_link"]
- if lock_link == "❌" then
+ if lock_link == "no" then
 
 return '*>* _الررابط 📎  بلتأكيد تم فتحها 🔓 في المجموعة ✅_'
 
 else 
-data[tostring(target)]["settings"]["lock_link"] = "❌" save_data(_config.moderation.data, data) 
+data[tostring(target)]["settings"]["lock_link"] = "no" save_data(_config.moderation.data, data) 
 
 return '*>* _تم فتح  🔓 الروابط 📎  في هذا المجموعة ✅!_'
 
@@ -663,12 +663,12 @@ if not is_mod(msg) then
 end
 
 local lock_tag = data[tostring(target)]["settings"]["lock_tag"] 
-if lock_tag == "☑️️" then
+if lock_tag == "yes" then
 
 return '*>* _التاك #️⃣  بلفعل تم قفله 🔐 في المجموعة ✅_'
 
 else
- data[tostring(target)]["settings"]["lock_tag"] = "☑️️"
+ data[tostring(target)]["settings"]["lock_tag"] = "yes"
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل  🔐 التاك #️⃣  في هذا المجموعة ✅!_ '
@@ -684,12 +684,12 @@ local function unlock_tag(msg, data, target)
  
 end
 local lock_tag = data[tostring(target)]["settings"]["lock_tag"]
- if lock_tag == "❌" then
+ if lock_tag == "no" then
 
 return '*>* _التاك #️⃣  بلفعل تم فتحه 🔓 في المجموعة ✅_'
 
 else 
-data[tostring(target)]["settings"]["lock_tag"] = "❌" save_data(_config.moderation.data, data) 
+data[tostring(target)]["settings"]["lock_tag"] = "no" save_data(_config.moderation.data, data) 
 
 return '*>* _تم فتح  🔓 التاك #️⃣  في هذا المجموعة ✅!_'
 end
@@ -705,12 +705,12 @@ if not is_mod(msg) then
 end
 
 local lock_mention = data[tostring(target)]["settings"]["lock_mention"] 
-if lock_mention == "☑️️" then
+if lock_mention == "yes" then
 
 return '*>* _التذكير 🔖  بلفعل تم قفله 🔐 في المجموعة ✅_'
 
 else
- data[tostring(target)]["settings"]["lock_mention"] = "☑️️"
+ data[tostring(target)]["settings"]["lock_mention"] = "yes"
 save_data(_config.moderation.data, data)
 
 return '*>* _تم قفل  🔐 التذكير 🔖 في هذا المجموعة ✅!_ '
@@ -727,12 +727,12 @@ local function unlock_mention(msg, data, target)
 end 
 
 local lock_mention = data[tostring(target)]["settings"]["lock_mention"]
- if lock_mention == "❌" then
+ if lock_mention == "no" then
 
 return '*>* _التذكير 🔖 بلفعل تم فتحه 🔓 في المجموعة ✅_'
 
 else 
-data[tostring(target)]["settings"]["lock_mention"] = "❌" save_data(_config.moderation.data, data) 
+data[tostring(target)]["settings"]["lock_mention"] = "no" save_data(_config.moderation.data, data) 
 
 return '*>* _تم فتح  🔓 التذكير 🔖 في هذا المجموعة ✅!_ '
 
@@ -750,12 +750,12 @@ if not is_mod(msg) then
 end
 
 local lock_edit = data[tostring(target)]["settings"]["lock_edit"] 
-if lock_edit == "☑️️" then
+if lock_edit == "yes" then
 
 return '*>* _التعديل ✏️  بلفعل تم قفله 🔐 في المجموعة ✅_'
 
 else
- data[tostring(target)]["settings"]["lock_edit"] = "☑️️"
+ data[tostring(target)]["settings"]["lock_edit"] = "yes"
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل  🔐 التعذيل ✏️ في هذا المجموعة ✅!_ '
@@ -770,10 +770,10 @@ if not is_mod(msg) then
 end 
 
 local lock_edit = data[tostring(target)]["settings"]["lock_edit"]
- if lock_edit == "❌" then
+ if lock_edit == "no" then
 return '*>* _التعديل ✏️  بلفعل تم فتحه 🔓 في المجموعة ✅_'
 else 
-data[tostring(target)]["settings"]["lock_edit"] = "❌" save_data(_config.moderation.data, data) 
+data[tostring(target)]["settings"]["lock_edit"] = "no" save_data(_config.moderation.data, data) 
 return '*>* _تم فتح  🔓 التعذيل ✏️ في هذا المجموعة ✅!_ '
 end
 end
@@ -788,12 +788,12 @@ if not is_mod(msg) then
 end
 
 local lock_spam = data[tostring(target)]["settings"]["lock_spam"] 
-if lock_spam == "☑️️" then
+if lock_spam == "yes" then
 
 return '*>* _الكلايش 📊  بلفعل تم قفله 🔐 في المجموعة ✅_'
 
 else
- data[tostring(target)]["settings"]["lock_spam"] = "☑️️"
+ data[tostring(target)]["settings"]["lock_spam"] = "yes"
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل  🔐 الكلايش 📊 في هذا المجموعة ✅!_'
@@ -810,12 +810,12 @@ local function unlock_spam(msg, data, target)
 end 
 
 local lock_spam = data[tostring(target)]["settings"]["lock_spam"]
- if lock_spam == "❌" then
+ if lock_spam == "no" then
 
 return '*>* _الكلايش 📊  بلفعل تم فتحها 🔓 في المجموعة ✅_'
 
 else 
-data[tostring(target)]["settings"]["lock_spam"] = "❌" 
+data[tostring(target)]["settings"]["lock_spam"] = "no" 
 save_data(_config.moderation.data, data)
 
 return '*>* _تم فتح  🔓 الكلايش 📊 في هذا المجموعة ✅!_ '
@@ -833,12 +833,12 @@ if not is_mod(msg) then
 end
 
 local lock_flood = data[tostring(target)]["settings"]["flood"] 
-if lock_flood == "☑️️" then
+if lock_flood == "yes" then
 
 return '*>* _التكرار 📶  بلفعل تم قفله 🔐 في المجموعة ✅_'
 
 else
- data[tostring(target)]["settings"]["flood"] = "☑️️"
+ data[tostring(target)]["settings"]["flood"] = "yes"
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل  🔐 التكرار 📶 في هذا المجموعة ✅!_ '
@@ -855,12 +855,12 @@ local function unlock_flood(msg, data, target)
 end 
 
 local lock_flood = data[tostring(target)]["settings"]["flood"]
- if lock_flood == "❌" then
+ if lock_flood == "no" then
 
 return '*>* _التكرار 📶  بلفعل تم فتحها 🔓 في المجموعة ✅_'
 
 else 
-data[tostring(target)]["settings"]["flood"] = "❌"
+data[tostring(target)]["settings"]["flood"] = "no"
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم فتح  🔓 التكرار 📶 في هذا المجموعة ✅!_ '
@@ -878,12 +878,12 @@ if not is_mod(msg) then
 end
 
 local lock_bots = data[tostring(target)]["settings"]["lock_bots"] 
-if lock_bots == "☑️️" then
+if lock_bots == "yes" then
 
 return '*>* _التكرار 📶  بلفعل تم قفله 🔐 في المجموعة ✅_'
 
 else
- data[tostring(target)]["settings"]["lock_bots"] = "☑️️"
+ data[tostring(target)]["settings"]["lock_bots"] = "yes"
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل  🔐 البوتات 🤖 في هذا المجموعة ✅!_ '
@@ -900,12 +900,12 @@ local function unlock_bots(msg, data, target)
 end
 
 local lock_bots = data[tostring(target)]["settings"]["lock_bots"]
- if lock_bots == "❌" then
+ if lock_bots == "no" then
 
 return '*>* _البوتات 🤖  بلفعل تم فتحها 🔓 في المجموعة ✅_'
 
 else 
-data[tostring(target)]["settings"]["lock_bots"] = "❌" save_data(_config.moderation.data, data) 
+data[tostring(target)]["settings"]["lock_bots"] = "no" save_data(_config.moderation.data, data) 
 
 return '*>* _تم فتح  🔓 البوتات 🤖 في هذا المجموعة ✅!_ '
 
@@ -922,12 +922,12 @@ if not is_mod(msg) then
 end
 
 local lock_join = data[tostring(target)]["settings"]["lock_join"] 
-if lock_join == "☑️️" then
+if lock_join == "yes" then
 
 return '*>* _الاضافه ➕  بلفعل تم قفله 🔐 في المجموعة ✅_'
 
 else
- data[tostring(target)]["settings"]["lock_join"] = "☑️️"
+ data[tostring(target)]["settings"]["lock_join"] = "yes"
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل  🔐 الاضافة ➕ في هذا المجموعة ✅!_ '
@@ -943,12 +943,12 @@ local function unlock_join(msg, data, target)
 end
 
 local lock_join = data[tostring(target)]["settings"]["lock_join"]
- if lock_join == "❌" then
+ if lock_join == "no" then
 
 return '*>* _الاضافه ➕  بلفعل تم فتحها 🔓 في المجموعة ✅_'
 
 else 
-data[tostring(target)]["settings"]["lock_join"] = "❌"
+data[tostring(target)]["settings"]["lock_join"] = "no"
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم فتح  🔓 الاضافة ➕ في هذا المجموعة ✅!_ '
@@ -966,12 +966,12 @@ if not is_mod(msg) then
 end
 
 local lock_markdown = data[tostring(target)]["settings"]["lock_markdown"] 
-if lock_markdown == "☑️️" then
+if lock_markdown == "yes" then
 
 return '*>* _الماركدون ◼️  بلفعل تم قفله 🔐 في المجموعة ✅_'
 
 else
- data[tostring(target)]["settings"]["lock_markdown"] = "☑️️"
+ data[tostring(target)]["settings"]["lock_markdown"] = "yes"
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل 🔐 الماركدون  ◼️  في هذا المجموعة ✅!_'
@@ -988,12 +988,12 @@ local function unlock_markdown(msg, data, target)
 end
 
 local lock_markdown = data[tostring(target)]["settings"]["lock_markdown"]
- if lock_markdown == "❌" then
+ if lock_markdown == "no" then
 
 return '*>* _الماركدون ◼️  بلفعل تم فتحه 🔓 في المجموعة ✅'
 
 else 
-data[tostring(target)]["settings"]["lock_markdown"] = "❌" save_data(_config.moderation.data, data) 
+data[tostring(target)]["settings"]["lock_markdown"] = "no" save_data(_config.moderation.data, data) 
 
 return '*>* _تم فتح 🔓 الماركدون  ◼️ الاضافة ➕ في هذا المجموعة ✅!_ '
 
@@ -1010,12 +1010,12 @@ if not is_mod(msg) then
 end
 
 local lock_webpage = data[tostring(target)]["settings"]["lock_webpage"] 
-if lock_webpage == "☑️️" then
+if lock_webpage == "yes" then
 
 return '*>* _الويب 🌐  بلفعل تم قفله 🔐 في المجموعة ✅_'
 
 else
- data[tostring(target)]["settings"]["lock_webpage"] = "☑️️"
+ data[tostring(target)]["settings"]["lock_webpage"] = "yes"
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل 🔐 صفحات الويب  🌐   في هذا المجموعة ✅!_ '
@@ -1032,12 +1032,12 @@ local function unlock_webpage(msg, data, target)
 end
 
 local lock_webpage = data[tostring(target)]["settings"]["lock_webpage"]
- if lock_webpage == "❌" then
+ if lock_webpage == "no" then
 
 return '*>* _صفحات الويب 🌐  بلفعل تم فتحها 🔓 في المجموعة ✅_'
 
 else 
-data[tostring(target)]["settings"]["lock_webpage"] = "❌"
+data[tostring(target)]["settings"]["lock_webpage"] = "no"
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم فتح 🔓 صفحات الويب  🌐   في هذا المجموعة ✅!_ '
@@ -1055,12 +1055,12 @@ if not is_mod(msg) then
 end
 
 local lock_pin = data[tostring(target)]["settings"]["lock_pin"] 
-if lock_pin == "☑️️" then
+if lock_pin == "yes" then
 
 return '*>* _التثبيت 📩  بلفعل تم قفله 🔐 في المجموعة ✅_'
 
 else
- data[tostring(target)]["settings"]["lock_pin"] = "☑️️"
+ data[tostring(target)]["settings"]["lock_pin"] = "yes"
 save_data(_config.moderation.data, data) 
 
 return "*>* _تم قفل 🔐 التثبيت 📩   في هذا المجموعة ✅!_\n"
@@ -1077,15 +1077,15 @@ local function unlock_pin(msg, data, target)
 end
 
 local lock_pin = data[tostring(target)]["settings"]["lock_pin"]
- if lock_pin == "❌" then
+ if lock_pin == "no" then
 
-return '🌟| _مرحبا عزيزي_ \n🌟| _التثبيت بالتأكيد تم فتحه_ ☑️️'
+return '*>* _التثبيت 📩 بلفعل تم فتحه 🔓 في المجموعة ✅_'
 
 else 
-data[tostring(target)]["settings"]["lock_pin"] = "❌"
+data[tostring(target)]["settings"]["lock_pin"] = "no"
 save_data(_config.moderation.data, data) 
 
-return '🌟| _مرحبا عزيزي_ \n🌟| _تم فتح التثبيت_ ☑️️'
+return '*>* _تم فتح 🔓 تثبيت الرسائل 📩 في المجموعة ✅_'
 
 end
 end
@@ -1101,12 +1101,12 @@ if not is_mod(msg) then
 end
 
 local mute_gif = data[tostring(target)]["mutes"]["mute_gif"] 
-if mute_gif == "☑️️" then
+if mute_gif == "yes" then
 
 return '*>* _الصور المتحركة 🎥  بلفعل تم قفله 🔐 في المجموعة ✅_'
 
 else
- data[tostring(target)]["mutes"]["mute_gif"] = "☑️️" 
+ data[tostring(target)]["mutes"]["mute_gif"] = "yes" 
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل 🔐 الصور المتحركة  🎥   في هذا المجموعة ✅!_ '
@@ -1123,11 +1123,11 @@ local function unmute_gif(msg, data, target)
 end 
 
 local mute_gif = data[tostring(target)]["mutes"]["mute_gif"]
- if mute_gif == "❌" then
+ if mute_gif == "no" then
 return '*>* _الصور المتحركة 🎥  بلفعل تم فتحها 🔓 في المجموعة ✅_'
 
 else 
-data[tostring(target)]["mutes"]["mute_gif"] = "❌"
+data[tostring(target)]["mutes"]["mute_gif"] = "no"
  save_data(_config.moderation.data, data) 
 
 return '*>* _تم فتح 🔓 الصور المتحركة 🎥  في هذا المجموعة ✅!_ '
@@ -1144,12 +1144,12 @@ if not is_mod(msg) then
 end
 
 local mute_game = data[tostring(target)]["mutes"]["mute_game"] 
-if mute_game == "☑️️" then
+if mute_game == "yes" then
 
 return '*>* _الالعاب 🎮  بلفعل تم فتحها 🔐 في المجموعة ✅_'
 
 else
- data[tostring(target)]["mutes"]["mute_game"] = "☑️️" 
+ data[tostring(target)]["mutes"]["mute_game"] = "yes" 
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل 🔐 الالعاب 🎮 في هذا المجموعة ✅!_\n '
@@ -1166,12 +1166,12 @@ local function unmute_game(msg, data, target)
 end
 
 local mute_game = data[tostring(target)]["mutes"]["mute_game"]
- if mute_game == "❌" then
+ if mute_game == "no" then
 
 return '*>* _الالعاب 🎮  بلفعل تم فتحها 🔓 في المجموعة ✅_'
 
 else 
-data[tostring(target)]["mutes"]["mute_game"] = "❌"
+data[tostring(target)]["mutes"]["mute_game"] = "no"
  save_data(_config.moderation.data, data)
 
 return '*>* _تم فتح 🔓 الالعاب 🎮 في هذا المجموعة ✅!_ '
@@ -1188,12 +1188,12 @@ if not is_mod(msg) then
 end
 
 local mute_inline = data[tostring(target)]["mutes"]["mute_inline"] 
-if mute_inline == "☑️️" then
+if mute_inline == "yes" then
 
 return '*>* _الانلاين ◻️  بلفعل تم قفلها 🔐 في المجموعة ✅_'
 
 else
- data[tostring(target)]["mutes"]["mute_inline"] = "☑️️" 
+ data[tostring(target)]["mutes"]["mute_inline"] = "yes" 
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل 🔐 الانلاين ◻️ في هذا المجموعة ✅!_ '
@@ -1210,12 +1210,12 @@ local function unmute_inline(msg, data, target)
 end 
 
 local mute_inline = data[tostring(target)]["mutes"]["mute_inline"]
- if mute_inline == "❌" then
+ if mute_inline == "no" then
 
 return '*>* _الانلاين ◻️  بلفعل تم فتحها 🔓 في المجموعة ✅_'
 
 else 
-data[tostring(target)]["mutes"]["mute_inline"] = "❌"
+data[tostring(target)]["mutes"]["mute_inline"] = "no"
  save_data(_config.moderation.data, data) 
 
 return '*>* _تم فتح 🔓 الانلاين ◻️ في هذا المجموعة ✅!_ '
@@ -1231,11 +1231,11 @@ if not is_mod(msg) then
 end
 
 local mute_text = data[tostring(target)]["mutes"]["mute_text"] 
-if mute_text == "☑️️" then
+if mute_text == "yes" then
 return '*>* _الدردشه 📝  بلفعل تم قفله 🔐 في المجموعة ✅_'
 
 else
- data[tostring(target)]["mutes"]["mute_text"] = "☑️️" 
+ data[tostring(target)]["mutes"]["mute_text"] = "yes" 
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل 🔐 الدردشه 📝 في هذا المجموعة ✅!_ '
@@ -1252,12 +1252,12 @@ local function unmute_text(msg, data, target)
 end
 
 local mute_text = data[tostring(target)]["mutes"]["mute_text"]
- if mute_text == "❌" then
+ if mute_text == "no" then
 
 return '*>* _الدردشه 📝  بلفعل تم فتحها 🔓 في المجموعة ✅_'
 
 else 
-data[tostring(target)]["mutes"]["mute_text"] = "❌"
+data[tostring(target)]["mutes"]["mute_text"] = "no"
  save_data(_config.moderation.data, data) 
 
 return '*>* _تم فتح 🔓 الدردشه 📝 في هذا المجموعة ✅!_ '
@@ -1274,12 +1274,12 @@ if not is_mod(msg) then
 end
 
 local mute_photo = data[tostring(target)]["mutes"]["mute_photo"] 
-if mute_photo == "☑️️" then
+if mute_photo == "yes" then
 
 return '*>* _الصور 🎑  بلفعل تم قفلها 🔐 في المجموعة ✅_'
 
 else
- data[tostring(target)]["mutes"]["mute_photo"] = "☑️️" 
+ data[tostring(target)]["mutes"]["mute_photo"] = "yes" 
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل 🔐 الصور 🎆 في هذا المجموعة ✅!_ '
@@ -1296,12 +1296,12 @@ local function unmute_photo(msg, data, target)
 end
  
 local mute_photo = data[tostring(target)]["mutes"]["mute_photo"]
- if mute_photo == "❌" then
+ if mute_photo == "no" then
 
 return '*>* _الصور 🏞  بلفعل تم فتحها 🔓 في المجموعة ✅_'
 
 else 
-data[tostring(target)]["mutes"]["mute_photo"] = "❌"
+data[tostring(target)]["mutes"]["mute_photo"] = "no"
  save_data(_config.moderation.data, data) 
 
 return '*>* _تم فتح 🔓 الصور 🎆 في هذا المجموعة ✅!_ '
@@ -1318,12 +1318,12 @@ if not is_mod(msg) then
 end
 
 local mute_video = data[tostring(target)]["mutes"]["mute_video"] 
-if mute_video == "☑️️" then
+if mute_video == "yes" then
 
 return '*>* _الفيديو 🎦  بلفعل تم قفله 🔐 في المجموعة ✅_'
 
 else
- data[tostring(target)]["mutes"]["mute_video"] = "☑️️" 
+ data[tostring(target)]["mutes"]["mute_video"] = "yes" 
 save_data(_config.moderation.data, data)
 
 return '*>* _تم قفل 🔐 الفيديو 🎦 في هذا المجموعة ✅!_ '
@@ -1340,12 +1340,12 @@ local function unmute_video(msg, data, target)
 end 
 
 local mute_video = data[tostring(target)]["mutes"]["mute_video"]
- if mute_video == "❌" then
+ if mute_video == "no" then
 
 return '*>* _الفيديو 🎦  بلفعل تم فتحه 🔓 في المجموعة ✅_'
 
 else 
-data[tostring(target)]["mutes"]["mute_video"] = "❌"
+data[tostring(target)]["mutes"]["mute_video"] = "no"
  save_data(_config.moderation.data, data) 
 
 return '*>* _تم فتح 🔓 الفيديو 🎦  في هذا المجموعة ✅ !_ '
@@ -1361,12 +1361,12 @@ if not is_mod(msg) then
 end
 
 local mute_audio = data[tostring(target)]["mutes"]["mute_audio"] 
-if mute_audio == "☑️️" then
+if mute_audio == "yes" then
 
 return '*>* _البصمات 🎙  بلفعل تم قفله 🔐 في المجموعة ✅_'
 
 else
- data[tostring(target)]["mutes"]["mute_audio"] = "☑️️" 
+ data[tostring(target)]["mutes"]["mute_audio"] = "yes" 
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل 🔐 البصمات 🎙  في هذا المجموعة ✅ !_ '
@@ -1383,12 +1383,12 @@ local function unmute_audio(msg, data, target)
 end 
 
 local mute_audio = data[tostring(target)]["mutes"]["mute_audio"]
- if mute_audio == "❌" then
+ if mute_audio == "no" then
 
 return '*>* _البصمات 🎙  بلفعل تم فتحه 🔓 في المجموعة ✅ !_'
 
 else 
-data[tostring(target)]["mutes"]["mute_audio"] = "❌"
+data[tostring(target)]["mutes"]["mute_audio"] = "no"
  save_data(_config.moderation.data, data)
 
 return '*>* _تم فتح  🔓 البصمات 🎙 في هذا المجموعة ✅ !_ '
@@ -1405,7 +1405,7 @@ if not is_mod(msg) then
 end
 
 local mute_voice = data[tostring(target)]["mutes"]["mute_voice"] 
-if mute_voice == "☑️️" then
+if mute_voice == "yes" then
 
 return '*>* _الصوت 🔕  بلفعل تم قفله 🔐 في المجموعة ✅ !_'
 
@@ -1620,12 +1620,12 @@ if not is_mod(msg) then
 end
 
 local mute_document = data[tostring(target)]["mutes"]["mute_document"] 
-if mute_document == "☑️️" then
+if mute_document == "yes" then
 
 return '*>* _الملفات 🗂  بلفعل تم قفلها 🔐 في المجموعة ✅ !_'
 
 else
- data[tostring(target)]["mutes"]["mute_document"] = "☑️️" 
+ data[tostring(target)]["mutes"]["mute_document"] = "yes" 
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل 🔐 الملفات 🗂  في هذا المجموعة ✅ !_ '
