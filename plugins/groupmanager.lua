@@ -1410,7 +1410,7 @@ if mute_voice == "yes" then
 return '*>* _الصوت 🔕  بلفعل تم قفله 🔐 في المجموعة ✅ !_'
 
 else
- data[tostring(target)]["mutes"]["mute_voice"] = "☑️️" 
+ data[tostring(target)]["mutes"]["mute_voice"] = "yes" 
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل 🔐 الصوت 🔕  في هذا المجموعة ✅ !_'
@@ -1427,12 +1427,12 @@ local function unmute_voice(msg, data, target)
 end 
 
 local mute_voice = data[tostring(target)]["mutes"]["mute_voice"]
- if mute_voice == "❌" then
+ if mute_voice == "no" then
 
 return '*>* _الصوت 📢  بلفعل تم فتحه 🔓 في المجموعة ✅ !_'
 
 else 
-data[tostring(target)]["mutes"]["mute_voice"] = "❌"
+data[tostring(target)]["mutes"]["mute_voice"] = "no"
  save_data(_config.moderation.data, data)
 
 return '*>* _تم فتح 🔓 الصوت 🔔  في هذا المجموعة ✅ !_ '
@@ -1449,12 +1449,12 @@ if not is_mod(msg) then
 end
 
 local mute_sticker = data[tostring(target)]["mutes"]["mute_sticker"] 
-if mute_sticker == "☑️️" then
+if mute_sticker == "yes" then
 
 return '*>* _الملصقات 🚼  بلفعل تم قفلها 🔐 في المجموعة ✅ !_'
 
 else
- data[tostring(target)]["mutes"]["mute_sticker"] = "☑️️" 
+ data[tostring(target)]["mutes"]["mute_sticker"] = "yes" 
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل 🔐 الملصقات 🚼  في هذا المجموعة ✅ !_ '
@@ -1469,12 +1469,12 @@ local function unmute_sticker(msg, data, target)
 end
 
 local mute_sticker = data[tostring(target)]["mutes"]["mute_sticker"]
- if mute_sticker == "❌" then
+ if mute_sticker == "no" then
 
 return '*>* _الملصقات 🚼  بلفعل تم فتحها 🔓 في المجموعة ✅ !_'
 
 else 
-data[tostring(target)]["mutes"]["mute_sticker"] = "❌"
+data[tostring(target)]["mutes"]["mute_sticker"] = "no"
  save_data(_config.moderation.data, data)
 
 return '*>* _تم فتح 🔓 الملصقات 🚼  في هذا المجموعة ✅ !_ '
@@ -1491,12 +1491,12 @@ if not is_mod(msg) then
 end
 
 local mute_contact = data[tostring(target)]["mutes"]["mute_contact"] 
-if mute_contact == "☑️️" then
+if mute_contact == "yes" then
 
 return '*>* _جهات الاتصال 📞  بلفعل تم قفلها 🔐 في المجموعة ✅ !_'
 
 else
- data[tostring(target)]["mutes"]["mute_contact"] = "☑️️" 
+ data[tostring(target)]["mutes"]["mute_contact"] = "yes" 
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل 🔐 جهات الاتصال 📞  في هذا المجموعة ✅ !_ '
@@ -1535,12 +1535,12 @@ if not is_mod(msg) then
 end
 
 local mute_forward = data[tostring(target)]["mutes"]["mute_forward"] 
-if mute_forward == "☑️️" then
+if mute_forward == "yes" then
 
 return '*>* _اعادة التوجية 🔂  بلفعل تم قفلها 🔐 في المجموعة ✅ !_'
 
 else
- data[tostring(target)]["mutes"]["mute_forward"] = "☑️️" 
+ data[tostring(target)]["mutes"]["mute_forward"] = "yes" 
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل 🔐 اعادة التوجية 🔂  في هذا المجموعة ✅ !_ '
@@ -1557,10 +1557,10 @@ local function unmute_forward(msg, data, target)
 end 
 
 local mute_forward = data[tostring(target)]["mutes"]["mute_forward"]
- if mute_forward == "❌" then
+ if mute_forward == "no" then
 return '*>* _اعادة التوجية 🔂  بلفعل تم فتحها 🔓 في المجموعة ✅ !_'
 else 
-data[tostring(target)]["mutes"]["mute_forward"] = "❌"
+data[tostring(target)]["mutes"]["mute_forward"] = "no"
  save_data(_config.moderation.data, data)
 
 return '*>* _تم فتح 🔓 اعادة التوجية 🔂  في هذا المجموعة ✅ !_ '
@@ -1576,12 +1576,12 @@ if not is_mod(msg) then
 end
 
 local mute_location = data[tostring(target)]["mutes"]["mute_location"] 
-if mute_location == "☑️️" then
+if mute_location == "yes" then
 
 return '*>* _المواقع 🌐  بلفعل تم قفلها 🔐 في المجموعة ✅ !_'
 
 else
- data[tostring(target)]["mutes"]["mute_location"] = "☑️️" 
+ data[tostring(target)]["mutes"]["mute_location"] = "yes" 
 save_data(_config.moderation.data, data)
 
 return '*>* _تم قفل 🔐 المواقع 🌐  في هذا المجموعة ✅ !_ '
@@ -1598,12 +1598,12 @@ local function unmute_location(msg, data, target)
 end 
 
 local mute_location = data[tostring(target)]["mutes"]["mute_location"]
- if mute_location == "❌" then
+ if mute_location == "no" then
 
 return '*>* _المواقع 🌐  بلفعل تم فتحها 🔓 في المجموعة ✅ !_'
 
 else 
-data[tostring(target)]["mutes"]["mute_location"] = "❌"
+data[tostring(target)]["mutes"]["mute_location"] = "no"
  save_data(_config.moderation.data, data) 
 
 return '*>* _تم فتح 🔓 المواقع 🌐  في هذا المجموعة ✅ !_ '
@@ -1642,12 +1642,12 @@ end
  
 
 local mute_document = data[tostring(target)]["mutes"]["mute_document"]
- if mute_document == "❌" then
+ if mute_document == "no" then
 
 return '*>* _الملفات 🗂  بلفعل تم فتحها 🔓 في المجموعة ✅ !_'
 
 else 
-data[tostring(target)]["mutes"]["mute_document"] = "❌"
+data[tostring(target)]["mutes"]["mute_document"] = "n0"
  save_data(_config.moderation.data, data) 
 
 return '*>* _تم فتح 🔓 الملفات 🗂  في هذا المجموعة ✅ !_ '
@@ -1664,12 +1664,12 @@ if not is_mod(msg) then
 end
 
 local mute_tgservice = data[tostring(target)]["mutes"]["mute_tgservice"] 
-if mute_tgservice == "☑️️" then
+if mute_tgservice == "yes" then
 
 return '*>* _الاشعارات 📈  بلفعل تم قفلها 🔐 في المجموعة ✅ !_'
 
 else
- data[tostring(target)]["mutes"]["mute_tgservice"] = "☑️️" 
+ data[tostring(target)]["mutes"]["mute_tgservice"] = "yes" 
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل 🔐 الاشعارات 📈  في هذا المجموعة ✅ !_ '
@@ -1683,11 +1683,11 @@ local function unmute_tgservice(msg, data, target)
 end
 
 local mute_tgservice = data[tostring(target)]["mutes"]["mute_tgservice"]
- if mute_tgservice == "❌" then
+ if mute_tgservice == "no" then
 
 return '*>* _الاشعارات 📈  بلفعل تم فتحها 🔓 في المجموعة ✅ !_'
 else 
-data[tostring(target)]["mutes"]["mute_tgservice"] = "❌"
+data[tostring(target)]["mutes"]["mute_tgservice"] = "no"
  save_data(_config.moderation.data, data) 
 
 return '*>* _تم فتح 🔓 الاشعارات 📈  في هذا المجموعة ✅ !_ '
@@ -1705,12 +1705,12 @@ if not is_mod(msg) then
 end
 
 local mute_keyboard = data[tostring(target)]["mutes"]["mute_keyboard"] 
-if mute_keyboard == "☑️️" then
+if mute_keyboard == "yes" then
 
 return '*>* _الكيبورد ⌨️  بلفعل تم قفله 🔐 في المجموعة ✅ !_'
 
 else
- data[tostring(target)]["mutes"]["mute_keyboard"] = "☑️️" 
+ data[tostring(target)]["mutes"]["mute_keyboard"] = "yes" 
 save_data(_config.moderation.data, data) 
 
 return '*>* _تم فتح 🔓 الكيبورد ⌨️  في هذا المجموعة ✅ !_ '
@@ -1725,12 +1725,12 @@ local function unmute_keyboard(msg, data, target)
 end
 
 local mute_keyboard = data[tostring(target)]["mutes"]["mute_keyboard"]
- if mute_keyboard == "❌" then
+ if mute_keyboard == "no" then
 
 return '*>* _الكيبورد ⌨️  بلفعل تم فتحه 🔓 في المجموعة ✅ !_'
  
 else 
-data[tostring(target)]["mutes"]["mute_keyboard"] = "❌"
+data[tostring(target)]["mutes"]["mute_keyboard"] = "no"
  save_data(_config.moderation.data, data) 
 
 return '*>* _تم قفل 🔐 الكيبورد ⌨️  في هذا المجموعة ✅ !_ '
@@ -1749,49 +1749,49 @@ local target = msg.to.id
 if data[tostring(target)]["mutes"] then		
 
 if not data[tostring(target)]["mutes"]["mute_gif"] then			
-data[tostring(target)]["mutes"]["mute_gif"] = "❌"		
+data[tostring(target)]["mutes"]["mute_gif"] = "n0"		
 end
 if not data[tostring(target)]["mutes"]["mute_text"] then			
-data[tostring(target)]["mutes"]["mute_text"] = "❌"		
+data[tostring(target)]["mutes"]["mute_text"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_photo"] then			
-data[tostring(target)]["mutes"]["mute_photo"] = "❌"		
+data[tostring(target)]["mutes"]["mute_photo"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_video"] then			
-data[tostring(target)]["mutes"]["mute_video"] = "❌"		
+data[tostring(target)]["mutes"]["mute_video"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_audio"] then			
-data[tostring(target)]["mutes"]["mute_audio"] = "❌"		
+data[tostring(target)]["mutes"]["mute_audio"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_voice"] then			
-data[tostring(target)]["mutes"]["mute_voice"] = "❌"		
+data[tostring(target)]["mutes"]["mute_voice"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_sticker"] then			
-data[tostring(target)]["mutes"]["mute_sticker"] = "❌"		
+data[tostring(target)]["mutes"]["mute_sticker"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_contact"] then			
-data[tostring(target)]["mutes"]["mute_contact"] = "❌"		
+data[tostring(target)]["mutes"]["mute_contact"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_forward"] then			
-data[tostring(target)]["mutes"]["mute_forward"] = "❌"		
+data[tostring(target)]["mutes"]["mute_forward"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_location"] then			
-data[tostring(target)]["mutes"]["mute_location"] = "❌"		
+data[tostring(target)]["mutes"]["mute_location"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_document"] then			
-data[tostring(target)]["mutes"]["mute_document"] = "❌"		
+data[tostring(target)]["mutes"]["mute_document"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_tgservice"] then			
-data[tostring(target)]["mutes"]["mute_tgservice"] = "❌"		
+data[tostring(target)]["mutes"]["mute_tgservice"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_inline"] then			
-data[tostring(target)]["mutes"]["mute_inline"] = "❌"		
+data[tostring(target)]["mutes"]["mute_inline"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_game"] then			
-data[tostring(target)]["mutes"]["mute_game"] = "❌"		
+data[tostring(target)]["mutes"]["mute_game"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_keyboard"] then			
-data[tostring(target)]["mutes"]["mute_keyboard"] = "❌"		
+data[tostring(target)]["mutes"]["mute_keyboard"] = "no"		
 end
 end
 
@@ -1847,98 +1847,98 @@ TIME_CHECK = 2
 end
 	
 if not data[tostring(target)]["settings"]["lock_link"] then			
-data[tostring(target)]["settings"]["lock_link"] = "☑️️"		
+data[tostring(target)]["settings"]["lock_link"] = "yes"		
 end
 if not data[tostring(target)]["settings"]["lock_tag"] then			
-data[tostring(target)]["settings"]["lock_tag"] = "☑️️"		
+data[tostring(target)]["settings"]["lock_tag"] = "yes"		
 end
 if not data[tostring(target)]["settings"]["lock_mention"] then			
-data[tostring(target)]["settings"]["lock_mention"] = "❌"		
+data[tostring(target)]["settings"]["lock_mention"] = "no"		
 end
 if not data[tostring(target)]["settings"]["lock_arabic"] then			
-data[tostring(target)]["settings"]["lock_arabic"] = "❌"		
+data[tostring(target)]["settings"]["lock_arabic"] = "no"		
 end
 if not data[tostring(target)]["settings"]["lock_edit"] then			
-data[tostring(target)]["settings"]["lock_edit"] = "❌"		
+data[tostring(target)]["settings"]["lock_edit"] = "no"		
 end
 if not data[tostring(target)]["settings"]["lock_spam"] then			
-data[tostring(target)]["settings"]["lock_spam"] = "☑️️"		
+data[tostring(target)]["settings"]["lock_spam"] = "yes"		
 end
 if not data[tostring(target)]["settings"]["lock_flood"] then			
-data[tostring(target)]["settings"]["lock_flood"] = "☑️️"		
+data[tostring(target)]["settings"]["lock_flood"] = "yes"		
 end
 if not data[tostring(target)]["settings"]["lock_bots"] then			
-data[tostring(target)]["settings"]["lock_bots"] = "☑️️"		
+data[tostring(target)]["settings"]["lock_bots"] = "yes"		
 end
 if not data[tostring(target)]["settings"]["lock_markdown"] then			
-data[tostring(target)]["settings"]["lock_markdown"] = "❌"		
+data[tostring(target)]["settings"]["lock_markdown"] = "no"		
 end
 if not data[tostring(target)]["settings"]["lock_webpage"] then			
-data[tostring(target)]["settings"]["lock_webpage"] = "❌"		
+data[tostring(target)]["settings"]["lock_webpage"] = "no"		
 end
 if not data[tostring(target)]["settings"]["welcome"] then			
-data[tostring(target)]["settings"]["welcome"] = "❌"		
+data[tostring(target)]["settings"]["welcome"] = "no"		
 end
 if not data[tostring(target)]["settings"]["lock_pin"] then			
-data[tostring(target)]["settings"]["lock_pin"] = "❌"		
+data[tostring(target)]["settings"]["lock_pin"] = "no"		
 end
 if not data[tostring(target)]["settings"]["lock_join"] then			
-data[tostring(target)]["settings"]["lock_join"] = "❌"		
+data[tostring(target)]["settings"]["lock_join"] = "no"		
 end
 if not data[tostring(target)]["settings"]["replay"] then			
-data[tostring(target)]["settings"]["replay"] = "❌"		
+data[tostring(target)]["settings"]["replay"] = "no"		
 end
 if not data[tostring(target)]["settings"]["lock_woring"] then			
-data[tostring(target)]["settings"]["lock_woring"] = "❌"		
+data[tostring(target)]["settings"]["lock_woring"] = "no"		
 end
 end
 
 if data[tostring(target)]["mutes"] then		
 
 if not data[tostring(target)]["mutes"]["mute_gif"] then			
-data[tostring(target)]["mutes"]["mute_gif"] = "❌"		
+data[tostring(target)]["mutes"]["mute_gif"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_text"] then			
-data[tostring(target)]["mutes"]["mute_text"] = "❌"		
+data[tostring(target)]["mutes"]["mute_text"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_photo"] then			
-data[tostring(target)]["mutes"]["mute_photo"] = "❌"		
+data[tostring(target)]["mutes"]["mute_photo"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_video"] then			
-data[tostring(target)]["mutes"]["mute_video"] = "❌"		
+data[tostring(target)]["mutes"]["mute_video"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_audio"] then			
-data[tostring(target)]["mutes"]["mute_audio"] = "❌"		
+data[tostring(target)]["mutes"]["mute_audio"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_voice"] then			
-data[tostring(target)]["mutes"]["mute_voice"] = "❌"		
+data[tostring(target)]["mutes"]["mute_voice"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_sticker"] then			
-data[tostring(target)]["mutes"]["mute_sticker"] = "❌"		
+data[tostring(target)]["mutes"]["mute_sticker"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_contact"] then			
-data[tostring(target)]["mutes"]["mute_contact"] = "❌"		
+data[tostring(target)]["mutes"]["mute_contact"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_forward"] then			
-data[tostring(target)]["mutes"]["mute_forward"] = "❌"		
+data[tostring(target)]["mutes"]["mute_forward"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_location"] then			
-data[tostring(target)]["mutes"]["mute_location"] = "❌"		
+data[tostring(target)]["mutes"]["mute_location"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_document"] then			
-data[tostring(target)]["mutes"]["mute_document"] = "❌"		
+data[tostring(target)]["mutes"]["mute_document"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_tgservice"] then			
-data[tostring(target)]["mutes"]["mute_tgservice"] = "❌"		
+data[tostring(target)]["mutes"]["mute_tgservice"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_inline"] then			
-data[tostring(target)]["mutes"]["mute_inline"] = "❌"		
+data[tostring(target)]["mutes"]["mute_inline"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_game"] then			
-data[tostring(target)]["mutes"]["mute_game"] = "❌"		
+data[tostring(target)]["mutes"]["mute_game"] = "no"		
 end
 if not data[tostring(target)]["mutes"]["mute_keyboard"] then			
-data[tostring(target)]["mutes"]["mute_keyboard"] = "❌"		
+data[tostring(target)]["mutes"]["mute_keyboard"] = "no"		
 end
 end
 
@@ -2072,7 +2072,7 @@ if matches[2] and is_mod(msg) then
    end
 if matches[1] == "تثبيت" and is_mod(msg) and msg.reply_id then
 local lock_pin = data[tostring(msg.to.id)]["settings"]["lock_pin"] 
- if lock_pin == '☑️️' then
+ if lock_pin == 'yes' then
 if is_owner(msg) then
     data[tostring(chat)]['pin'] = msg.reply_id
 	  save_data(_config.moderation.data, data)
@@ -2083,7 +2083,7 @@ return "*>* _تم تثبيت 📩 الرسالة بنجاح ✅_"
 elseif not is_owner(msg) then
    return
  end
- elseif lock_pin == '❌' then
+ elseif lock_pin == 'no' then
     data[tostring(chat)]['pin'] = msg.reply_id
 	  save_data(_config.moderation.data, data)
 tdcli.pinChannelMessage(msg.to.id, msg.reply_id, 1)
@@ -2094,7 +2094,7 @@ end
 end
 if matches[1] == "الغاء التثبيت" and is_mod(msg) then
 local lock_pin = data[tostring(msg.to.id)]["settings"]["lock_pin"] 
- if lock_pin == '☑️️' then
+ if lock_pin == 'yes' then
 if is_owner(msg) then
 tdcli.unpinChannelMessage(msg.to.id)
 return "*>* _تم الغاء تثبيت 📩 الرسالة بنجاح ❌_"
@@ -2102,7 +2102,7 @@ return "*>* _تم الغاء تثبيت 📩 الرسالة بنجاح ❌_"
 elseif not is_owner(msg) then
    return 
  end
- elseif lock_pin == '❌' then
+ elseif lock_pin == 'no' then
 tdcli.unpinChannelMessage(msg.to.id)
 
 return "*>* _تم الغاء تثبيت 📩 الرسالة بنجاح ❌_"
@@ -2511,7 +2511,7 @@ if matches[1] == "الرابط" and is_mod(msg) then
  if not linkgp then
 return "*>* _ عذراً ليس 📭 هناك رابط 📎 في المجموعة 🚻\nلاضافة ➕ رابط فقط ارسل_ *ضع رابط* !"
       end
-      text = "<b>> رابط المجموعة :-</b>\n"..linkgp
+      text = "<b>> رابط المجموعة 🚻:-</b>\n"..linkgp
         return tdcli.sendMessage(chat, msg.id, 1, text, 1, 'html')
      end
      
@@ -2548,7 +2548,7 @@ return '*>* *تم حفظ القوانين 📝 بنجاح ✅*\n_ارسل كلم
 
   if matches[1] == "ضع تكرار" and is_mod(msg) then
 			if tonumber(matches[2]) < 1 or tonumber(matches[2]) > 50 then
-				return "*>* _حدود التكرار 🔢 يجب ان تكون بين _ * 2 - 50* "
+				return "*>* *حدود التكرار 🔢 يجب ان تكون بين *2 - 50 "
       end
 			local flood_max = matches[2]
 			data[tostring(chat)]['settings']['num_msg_max'] = flood_max
@@ -2790,20 +2790,20 @@ return unlock_replay(msg, data, target)
 end
 if matches[2] == "الترحيب" then
 			welcome = data[tostring(chat)]['settings']['welcome']
-		if welcome == "☑️️" then
+		if welcome == "yes" then
 return "*>* _تم تشغيل الترحيب 💌 مسبقاً ✅_"
 			else
-		data[tostring(chat)]['settings']['welcome'] = "☑️️"
+		data[tostring(chat)]['settings']['welcome'] = "yes"
 	    save_data(_config.moderation.data, data)
 return "*>* _تم تشغيل الترحيب 💌 بنجاح ✅_"
 		end
 	end
 	if matches[2] == "التحذير" then
 			lock_woring = data[tostring(chat)]['settings']['lock_woring']
-		if lock_woring == "☑️️" then
+		if lock_woring == "yes" then
 return "*>* _تم تشغيل التحذير 📵 مسبقاً ✅_"
 			else
-		data[tostring(chat)]['settings']['lock_woring'] = "☑️️"
+		data[tostring(chat)]['settings']['lock_woring'] = "yes"
 	    save_data(_config.moderation.data, data)
 return "*>* _تم تشغيل التحذير 📵 بنجاح ✅_"
 		end
@@ -2816,10 +2816,10 @@ if matches[1] == "ايقاف" and is_mod(msg) then
         end
          if matches[2] == "الترحيب" then
     welcome = data[tostring(chat)]['settings']['welcome']
-	if welcome == "❌" then
+	if welcome == "no" then
 	return "*>* تم ايقاف الترحيب 💌 مسبقاً ❌"
 			else
-		data[tostring(chat)]['settings']['welcome'] = "❌"
+		data[tostring(chat)]['settings']['welcome'] = "no"
 	    save_data(_config.moderation.data, data)
 return "*>* تم ايقاف الترحيب 💌 بنجاح ❌"
 			end
@@ -2827,10 +2827,10 @@ end
 
       if matches[2] == "التحذير" then
     lock_woring = data[tostring(chat)]['settings']['lock_woring']
-	if lock_woring == "❌" then
+	if lock_woring == "no" then
 	return "*>* تم ايقاف التحذير 📵 مسبقاً ❌"
 			else
-		data[tostring(chat)]['settings']['lock_woring'] = "❌"
+		data[tostring(chat)]['settings']['lock_woring'] = "no"
 	    save_data(_config.moderation.data, data)
 return "*>* تم ايقاف التحذير 📵 بنجاح ❌"
 			end
@@ -2880,7 +2880,7 @@ return tdcli.sendMessage(msg.to.id, 0, 1, '*>*  البوت ليس ادمن في 
     if administration[arg.chat_id]['setwelcome'] then
      welcome = administration[arg.chat_id]['setwelcome']
       else
-		welcome = "اهلا بك عزيزي 😃 في المجموعة 💌\nالرجاء الالتزام في قوانين المجموعة 📑\nقناتنا :-م :- @WarsTeam"
+		welcome = "اهلا بك عزيزي 😃 في المجموعة 💌\nالرجاء الالتزام في قوانين المجموعة 📑\nقناتنا  :- @WarsTeam"
      end
  if administration[tostring(arg.chat_id)]['rules'] then
 rules = administration[arg.chat_id]['rules']
