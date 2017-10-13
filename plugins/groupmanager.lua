@@ -1,4 +1,4 @@
--- __  __                    _       
+-- __  __                    _        
 --|  \/  | __ _ _ __ ___ ___| | ___  
 --| |\/| |/ _` | '__/ __/ _ \ |/ _ \ 
 --| |  | | (_| | | | (_|  __/ | (_) |
@@ -372,7 +372,7 @@ local cmd = arg.cmd
     local administration = load_data(_config.moderation.data)
   if not administration[tostring(arg.chat_id)] then
 
-    return tdcli.sendMessage(data.chat_id_, "", 0, "*>* _هذه المجموعه 🚻 ليست من حمايتي ⚡️", 0, "md")
+    return tdcli.sendMessage(data.chat_id_, "", 0, "*>* هذه المجموعه 🚻 ليست من حمايتي ⚡️", 0, "md")
      
   end
 if not arg.username then return false end
@@ -473,7 +473,7 @@ local cmd = arg.cmd
     local administration = load_data(_config.moderation.data)
   if not administration[tostring(arg.chat_id)] then
 
-    return tdcli.sendMessage(data.chat_id_, "", 0, "*>* _هذه المجموعه 🚻 ليست من حمايتي ⚡️", 0, "md")
+    return tdcli.sendMessage(data.chat_id_, "", 0, "*>* هذه المجموعه 🚻 ليست من حمايتي ⚡️", 0, "md")
      
   end
 if not tonumber(arg.user_id) then return false end
@@ -1079,13 +1079,13 @@ end
 local lock_pin = data[tostring(target)]["settings"]["lock_pin"]
  if lock_pin == "❌" then
 
-return '🌟| _مرحبا عزيزي_ \n🌟| _التثبيت بالتأكيد تم فتحه_ ☑️️'
+return '*>* _التثبيت 📩 بلفعل تم فتحه 🔓 في المجموعة ✅_'
 
 else 
 data[tostring(target)]["settings"]["lock_pin"] = "❌"
 save_data(_config.moderation.data, data) 
 
-return '🌟| _مرحبا عزيزي_ \n🌟| _تم فتح التثبيت_ ☑️️'
+return '*>* _تم فتح 🔓 تثبيت الرسائل 📩 في المجموعة ✅_'
 
 end
 end
@@ -1961,7 +1961,7 @@ local settings = data[tostring(target)]["settings"]
 local mutes = data[tostring(target)]["mutes"]
 
  list_mutes = "*اعدادات المجموعة ⚙️*"
-  .."\n--------------------"
+  .."\n———————————————–——"
  .."\n*>* قفل المتحركه 🎥:- "..mutes.mute_gif
  .."\n*>* قفل الدردشه 🔏:- "..mutes.mute_text
  .."\n*>* قفل الانلاين ⬜️:- "..mutes.mute_inline
@@ -1984,7 +1984,7 @@ local mutes = data[tostring(target)]["mutes"]
 .."\n*>* تشغيل التحذير ⛔️:- "..settings.lock_woring
 
  .." \n\n*>* الاشتراك 💳: "..expire_date
- .."\n--------------------\n"
+ .."\n*——————————–—————–——*\n"
  .."\n*قناتنا 📢 :-* @WarsTeam"
  .."\n*للتواصل 📨 :-* @WarsSupportBot \n"
 
