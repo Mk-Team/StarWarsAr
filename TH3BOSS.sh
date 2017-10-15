@@ -63,7 +63,7 @@ __        __ _  ____   ____ _____ _____    _    __  __
 function th3boss() {
 	echo -e "\e[0m"
 	  red "     >>>>                        We Are Not Attacker                             "
-    green "     >>>>                        We Are Not Alliance                             "
+    green "     >>>>                            We Are Not Alliance                             "
 	white "     >>>>                        We Are Programmer                               "
 	white "     >>>>                        We Are The Best                                 "
 	  red "     >>>>                        We Are Family                                   "
@@ -96,7 +96,7 @@ if [ ! -f ./tg/tgcli ]; then
     exit 1
  fi
 	print_logo
-	Star Wars
+	StarWars
 	logo_play
    #sudo service redis-server restart
    ./tg/tgcli -s ./bot/bot.lua -l 1 -E $@
